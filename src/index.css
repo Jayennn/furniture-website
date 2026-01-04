@@ -1,1 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-geist: "Geist", sans-serif;
+  --font-inter-tight: "Inter Tight", system-ui, sans-serif;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./assets/hero-image.png");
+  /* height: 50%; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+@layer components {
+  .heading {
+    @apply text-[#1A1A1A] font-geist font-light leading-[120%] tracking-widest uppercase;
+  }
+
+  .paragraph {
+    @apply text-[#1A1A1A] font-inter-tight font-normal leading-[180%];
+  }
+
+  .container {
+    @apply mx-auto px-8;
+  }
+}
