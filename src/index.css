@@ -21,17 +21,17 @@ html {
 
 .hero-section {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("./assets/hero-image.png");
+    url("./assets/hero-image.webp");
 }
 
 .cta-section {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("./assets/cta-image.jpg");
+    url("./assets/cta-image.webp");
 }
 
 @layer components {
   .heading {
-    @apply text-[#1A1A1A] font-geist font-light leading-[120%] tracking-widest uppercase;
+    @apply text-[#1A1A1A] font-geist font-light leading-[120%] tracking-tight uppercase;
   }
 
   .paragraph {
