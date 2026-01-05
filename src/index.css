@@ -11,14 +11,22 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.hero-section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("./assets/hero-image.png");
-  /* height: 50%; */
+.hero-section,
+.cta-section {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+
+.hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./assets/hero-image.png");
+}
+
+.cta-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./assets/cta-image.jpg");
 }
 
 @layer components {
