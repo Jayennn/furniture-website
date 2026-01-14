@@ -99,22 +99,15 @@ export function AboutSection() {
           {/* Brand Info */}
           <div className="flex flex-col w-full xl:w-1/2">
             <div className="flex flex-col justify-center max-w-4xl h-auto lg:h-96 mb-6 lg:mb-0">
-              <h2
-                ref={titleRef}
-                className="heading font-medium text-2xl sm:text-3xl lg:text-4xl mb-4"
-              >
+              <h2 className="heading tracking-[4%] text-2xl sm:text-3xl lg:text-6xl mb-4">
                 Carpentiére
               </h2>
-              <p
-                ref={subtitleRef}
-                className="paragraph text-base sm:text-lg lg:text-xl mb-8 lg:mb-12"
-              >
+              <p className="paragraph text-base sm:text-lg lg:text-xl mb-8 lg:mb-12">
                 We are a design studio focused on creating furniture and
                 interior spaces that feel calm, balanced, and timeless.
               </p>
             </div>
             <img
-              ref={imageRef}
               className="w-full rounded-lg object-cover"
               src={AboutImage}
               alt="About Carpentiére"
@@ -122,7 +115,7 @@ export function AboutSection() {
           </div>
 
           {/* Strength Brand */}
-          <div ref={gridRef} className="grid grid-cols-2 w-full xl:w-1/2">
+          <div className="grid grid-cols-2 w-full xl:w-1/2">
             <div
               data-grid-item
               className="border-0 border-r border-t border-b border-gray-200 py-5 px-3 sm:px-4 flex flex-col justify-end gap-4 sm:gap-6"

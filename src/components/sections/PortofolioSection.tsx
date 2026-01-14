@@ -6,7 +6,6 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import portofolioImage1 from "@/assets/portofolio-image-1.webp";
 import portofolioImage2 from "@/assets/portofolio-image-2.webp";
 import portofolioImage3 from "@/assets/portofolio-image-3.webp";
-import portofolioImage4 from "@/assets/portofolio-image-4.webp";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -90,7 +89,7 @@ export function PortofolioSection() {
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 sm:gap-8">
               <h2
                 ref={titleRef}
-                className="heading font-medium text-3xl sm:text-4xl lg:text-5xl shrink-0"
+                className="heading text-3xl sm:text-4xl lg:text-6xl shrink-0"
               >
                 Portofolio
               </h2>
@@ -159,36 +158,6 @@ export function PortofolioSection() {
                   View Project
                 </span>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="py-12 sm:py-20 md:py-32 lg:py-52">
-        <div className="container px-4 sm:px-6 lg:px-0">
-          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-            <div className="w-full lg:w-1/2">
-              <h2 className="heading font-medium text-2xl sm:text-3xl lg:text-4xl">
-                Space we shape
-              </h2>
-              <div className="flex flex-col gap-6 sm:gap-8 mt-6">
-                <p className="paragraph text-sm sm:text-base md:text-lg lg:text-xl ">
-                  Each space is shaped with intention — where proportion,
-                  material, and light come together to create a calm and
-                  balanced living environment. Our furniture is designed to
-                  belong naturally within a space, enhancing how it feels,
-                  moves, and is experienced every day.
-                </p>
-                <button className="cursor-pointer paragraph text-sm sm:text-base md:text-lg lg:text-xlflex items-center gap-2 uppercase underline decoration-[#3D3029]/50 underline-offset-8 w-fit hover:opacity-70 transition">
-                  View Project
-                </button>
-              </div>
-            </div>
-            <div className="w-full lg:w-1/2">
-              <img
-                className="w-full rounded-lg object-cover"
-                src={portofolioImage4}
-                alt="Portofolio 4"
-              />
             </div>
           </div>
         </div>
