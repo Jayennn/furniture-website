@@ -9,7 +9,7 @@ export function HeroSection() {
     >
       <div className="container px-4 sm:px-6 lg:px-0">
         <div className="mb-8 flex flex-col gap-6 sm:gap-8 lg:flex-row sm:items-center sm:justify-between lg:gap-12">
-          <h1 className="heading w-full lg:max-w-2xl shrink-0 text-4xl sm:text-5xl lg:text-6xl">
+          <h1 className="heading w-full lg:max-w-2xl shrink-0 text-6xl">
             Beautiful Furniture for Your Home
           </h1>
           <p className="paragraph lg:max-w-lg text-base sm:text-lg lg:text-xl">

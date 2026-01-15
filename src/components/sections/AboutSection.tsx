@@ -11,10 +11,10 @@ export function AboutSection() {
           {/* Brand Info */}
           <div className="flex w-full flex-col xl:w-1/2">
             <div className="mb-6 flex h-auto flex-col justify-center space-y-4 lg:mb-0 lg:h-96">
-              <h2 className="heading text-3xl tracking-[4%] sm:text-4xl lg:text-6xl">
+              <h2 className="heading tracking-[4%] text-4xl sm:text-5xl lg:text-6xl">
                 Carpentiére
               </h2>
-              <p className="paragraph mb-8 text-base sm:text-lg lg:mb-12 lg:text-xl">
+              <p className="paragraph mb-8 lg:mb-12 text-lg lg:text-xl">
                 We are a design studio focused on creating furniture and
                 interior spaces that feel calm, balanced, and timeless.
               </p>

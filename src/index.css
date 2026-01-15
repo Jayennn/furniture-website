@@ -11,7 +11,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.hero-section,
+.hero-portofolio,
 .cta-section {
   background-position: center;
   background-repeat: no-repeat;
@@ -19,9 +19,9 @@ html {
   position: relative;
 }
 
-.hero-section {
+.hero-portofolio {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("./assets/hero-image.webp");
+    url("./assets/hero-portofolio.png");
 }
 
 .cta-section {

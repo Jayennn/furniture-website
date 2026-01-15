@@ -34,10 +34,10 @@ export function PortofolioSection() {
       <div className="container px-4 sm:px-6 lg:px-0">
         <div className="mb-12 flex flex-col gap-8 sm:gap-12 lg:mb-20 lg:gap-16">
           <div className="flex flex-col space-y-4 lg:flex-row lg:items-center lg:justify-between lg:space-y-0">
-            <h2 className="heading shrink-0 text-3xl sm:text-4xl lg:text-6xl">
+            <h2 className="heading shrink-0 text-4xl sm:text-5xl lg:text-6xl">
               Portofolio
             </h2>
-            <p className="paragraph text-sm sm:text-base md:max-w-lg md:text-lg lg:text-xl">
+            <p className="paragraph md:max-w-lg text-lg lg:text-xl">
               More than buildings, we design human experiences. Our studio
               crafts thoughtful environments that connect, inspire, and resonate
               for a lifetime.
@@ -46,7 +46,7 @@ export function PortofolioSection() {
           <hr className="border-gray-200" />
         </div>
 
-        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {portfolioItems.map((item) => (
             <article
               key={item.id}
@@ -61,11 +61,11 @@ export function PortofolioSection() {
                 decoding="async"
               />
               <div className="flex flex-row justify-between gap-3 sm:gap-4 sm:items-center">
-                <p className="paragraph text-sm uppercase tracking-wide sm:text-base">
+                <p className="paragraph text-base uppercase tracking-wide">
                   {item.title}
                 </p>
                 <button
-                  className="paragraph flex w-fit items-center gap-2 text-sm uppercase sm:text-base underline underline-offset-4 transition-opacity hover:opacity-70 sm:underline-offset-8"
+                  className="paragraph flex w-fit items-center gap-2 text-base uppercase underline underline-offset-4 transition-opacity hover:opacity-70 sm:underline-offset-8"
                   aria-label={`View ${item.title} project`}
                 >
                   View Project
