@@ -2,14 +2,17 @@ import portofolioImage4 from "@/assets/portofolio-image-4.webp";
 
 export function CtaSection() {
   return (
-    <section className="py-12 sm:py-20 md:py-32 lg:py-52">
+    <section
+      className="py-12 sm:py-20 md:py-32 lg:py-52"
+      aria-label="Call to action section"
+    >
       <div className="container px-4 sm:px-6 lg:px-0">
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+        <div className="flex flex-col items-center gap-8 lg:flex-row lg:gap-12">
           <div className="w-full lg:w-1/2">
-            <h2 className="heading text-2xl sm:text-3xl lg:text-6xl">
-              Space we shape
+            <h2 className="heading text-3xl sm:text-4xl lg:text-6xl">
+              Spaces We Shape
             </h2>
-            <div className="flex flex-col gap-6 sm:gap-8 mt-6">
+            <div className="mt-4 flex flex-col gap-6 sm:gap-8">
               <p className="paragraph text-sm sm:text-base md:text-lg lg:text-xl">
                 Each space is shaped with intention — where proportion,
                 material, and light come together to create a calm and balanced
@@ -17,16 +20,21 @@ export function CtaSection() {
                 naturally within a space, enhancing how it feels, moves, and is
                 experienced every day.
               </p>
-              <button className="cursor-pointer paragraph text-sm sm:text-base flex items-center gap-2 uppercase underline decoration-[#3D3029]/50 underline-offset-8 w-fit hover:opacity-70 transition">
+              <button
+                className="paragraph flex w-fit items-center gap-2 text-sm uppercase sm:text-base underline decoration-[#3D3029]/50 underline-offset-8 transition-opacity hover:opacity-70"
+                aria-label="View more projects"
+              >
                 View Project
               </button>
             </div>
           </div>
-          <div className="w-full lg:w-2/4 ">
+          <div className="w-full lg:w-2/4">
             <img
               className="w-full rounded-lg object-cover"
               src={portofolioImage4}
-              alt="Portofolio 4"
+              alt="Luxury furniture installation showcasing Carpentiére design philosophy"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>

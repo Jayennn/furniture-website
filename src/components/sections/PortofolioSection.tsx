@@ -1,167 +1,80 @@
-import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { SplitText } from "gsap/all";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import portofolioImage1 from "@/assets/portofolio-image-1.webp";
 import portofolioImage2 from "@/assets/portofolio-image-2.webp";
 import portofolioImage3 from "@/assets/portofolio-image-3.webp";
 
-gsap.registerPlugin(ScrollTrigger, SplitText);
+const portfolioItems = [
+  {
+    id: 1,
+    title: "Modern Living Room",
+    image: portofolioImage1,
+    description:
+      "Contemporary furniture design for sophisticated living spaces",
+  },
+  {
+    id: 2,
+    title: "Minimalist Workspace",
+    image: portofolioImage2,
+    description:
+      "Functional and elegant design for productive work environments",
+  },
+  {
+    id: 3,
+    title: "Luxury Bedroom",
+    image: portofolioImage3,
+    description: "Comfortable and stylish furniture for restful bedrooms",
+  },
+];
 
 export function PortofolioSection() {
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const descRef = useRef<HTMLParagraphElement>(null);
-  const itemsContainerRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    // Title animation
-    const titleSplit = new SplitText(titleRef.current, {
-      type: "chars, words",
-    });
-
-    gsap.from(titleSplit.chars, {
-      opacity: 0,
-      yPercent: 100,
-      duration: 1,
-      ease: "power3.out",
-      stagger: 0.06,
-      scrollTrigger: {
-        trigger: titleRef.current,
-        start: "top 80%",
-        end: "top 20%",
-        once: true,
-      },
-    });
-
-    // Description animation
-    const descSplit = new SplitText(descRef.current, {
-      type: "lines",
-    });
-
-    gsap.from(descSplit.lines, {
-      opacity: 0,
-      yPercent: 100,
-      duration: 1.8,
-      ease: "expo.out",
-      stagger: 0.06,
-      delay: 0.1,
-      scrollTrigger: {
-        trigger: descRef.current,
-        start: "top 80%",
-        end: "top 20%",
-        once: true,
-      },
-    });
-
-    // Portfolio items staggered animation
-    const items = itemsContainerRef.current?.querySelectorAll(
-      "[data-portfolio-item]"
-    );
-    if (items) {
-      gsap.from(items, {
-        opacity: 0,
-        // scale: 0.95,
-        yPercent: 20,
-        duration: 0.8,
-        ease: "power2.out",
-        stagger: 0.15,
-        scrollTrigger: {
-          trigger: itemsContainerRef.current,
-          start: "top 85%",
-          end: "top 35%",
-          once: true,
-        },
-      });
-    }
-
-    return () => {
-      titleSplit.revert();
-      descSplit.revert();
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
   return (
-    <>
-      <section className="py-12 sm:py-20 md:py-32 lg:py-52">
-        <div className="container px-4 sm:px-6 lg:px-0">
-          <div className="flex flex-col gap-8 sm:gap-12 lg:gap-16 mb-12 lg:mb-20">
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 sm:gap-8">
-              <h2
-                ref={titleRef}
-                className="heading text-3xl sm:text-4xl lg:text-6xl shrink-0"
-              >
-                Portofolio
-              </h2>
-              <p
-                ref={descRef}
-                className="paragraph text-sm sm:text-base md:text-lg lg:text-xl max-w-lg"
-              >
-                More than buildings, we design human experiences. Our studio
-                crafts thoughtful environments that connect, inspire, and
-                resonate for a lifetime.
-              </p>
-            </div>
-            <hr className="border-gray-200" />
+    <section
+      className="py-12 sm:py-20 md:py-32 lg:py-52"
+      aria-label="Portfolio section"
+    >
+      <div className="container px-4 sm:px-6 lg:px-0">
+        <div className="mb-12 flex flex-col gap-8 sm:gap-12 lg:mb-20 lg:gap-16">
+          <div className="flex flex-col space-y-4 lg:flex-row lg:items-center lg:justify-between lg:space-y-0">
+            <h2 className="heading shrink-0 text-3xl sm:text-4xl lg:text-6xl">
+              Portofolio
+            </h2>
+            <p className="paragraph text-sm sm:text-base md:max-w-lg md:text-lg lg:text-xl">
+              More than buildings, we design human experiences. Our studio
+              crafts thoughtful environments that connect, inspire, and resonate
+              for a lifetime.
+            </p>
           </div>
-
-          <div
-            ref={itemsContainerRef}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6"
-          >
-            {/* Portfolio items can be added here in the future */}
-            <div data-portfolio-item className="flex flex-col gap-4">
-              <img
-                className="w-full rounded-lg object-cover"
-                src={portofolioImage1}
-                alt="Portfolio 1"
-              />
-              <div className="flex flex-row items-center justify-between gap-3 sm:gap-4">
-                <p className="paragraph text-sm sm:text-base uppercase tracking-wide">
-                  Lorem ipsum
-                </p>
-                <span className="paragraph text-sm sm:text-base flex items-center gap-2 uppercase underline underline-offset-4 sm:underline-offset-8 w-fit hover:opacity-70 transition cursor-pointer">
-                  View Project
-                </span>
-              </div>
-            </div>
-
-            {/* Portfolio Item 2 */}
-            <div data-portfolio-item className="flex flex-col gap-4">
-              <img
-                className="w-full rounded-lg object-cover"
-                src={portofolioImage2}
-                alt="Portfolio 2"
-              />
-              <div className="flex flex-row items-center justify-between gap-3 sm:gap-4">
-                <p className="paragraph text-sm sm:text-base uppercase tracking-wide">
-                  Lorem ipsum
-                </p>
-                <span className="paragraph text-sm sm:text-base flex items-center gap-2 uppercase underline underline-offset-4 sm:underline-offset-8 w-fit hover:opacity-70 transition cursor-pointer">
-                  View Project
-                </span>
-              </div>
-            </div>
-
-            {/* Portfolio Item 3 */}
-            <div data-portfolio-item className="flex flex-col gap-4">
-              <img
-                className="w-full rounded-lg object-cover"
-                src={portofolioImage3}
-                alt="Portfolio 3"
-              />
-              <div className="flex flex-row items-center justify-between gap-3 sm:gap-4">
-                <p className="paragraph text-sm sm:text-base uppercase tracking-wide">
-                  Lorem ipsum
-                </p>
-                <span className="paragraph text-sm sm:text-base flex items-center gap-2 uppercase underline underline-offset-4 sm:underline-offset-8 w-fit hover:opacity-70 transition cursor-pointer">
-                  View Project
-                </span>
-              </div>
-            </div>
-          </div>
+          <hr className="border-gray-200" />
         </div>
-      </section>
-    </>
+
+        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+          {portfolioItems.map((item) => (
+            <article
+              key={item.id}
+              className="flex flex-col gap-4 group hover:opacity-80 transition-opacity"
+              role="article"
+            >
+              <img
+                className="w-full rounded-lg object-cover"
+                src={item.image}
+                alt={item.description}
+                loading="lazy"
+                decoding="async"
+              />
+              <div className="flex flex-row justify-between gap-3 sm:gap-4 sm:items-center">
+                <p className="paragraph text-sm uppercase tracking-wide sm:text-base">
+                  {item.title}
+                </p>
+                <button
+                  className="paragraph flex w-fit items-center gap-2 text-sm uppercase sm:text-base underline underline-offset-4 transition-opacity hover:opacity-70 sm:underline-offset-8"
+                  aria-label={`View ${item.title} project`}
+                >
+                  View Project
+                </button>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
