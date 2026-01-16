@@ -93,11 +93,11 @@ export function PortofolioGridSection() {
                     </h3>
                   </TextReveal>
                   <button
-                    className="border px-4 py-2 paragraph inline-flex w-fit items-center justify-center gap-2 text-sm sm:text-base uppercase transition-all duration-300 whitespace-nowrap hover:bg-black hover:text-white"
+                    className="paragraph inline-flex w-fit items-center justify-center gap-2 text-sm sm:text-base uppercase transition-all duration-300 whitespace-nowrap hover:bg-black hover:text-white"
                     aria-label="View Detail"
                   >
                     View Detail
-                    <ArrowUpRight strokeWidth={1} />
+                    <ArrowUpRight strokeWidth={1} className="w-6 h-6" />
                   </button>
                 </div>
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 items-start md:items-center justify-between gap-4">

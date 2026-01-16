@@ -14,14 +14,17 @@ export function Navbar() {
           </h1>
           <ul className=" items-center space-x-6 md:space-x-10">
             <li className="inline-block">
-              <a href="/" className="paragraph text-lg  transition-colors">
+              <a
+                href="/"
+                className="paragraph text-sm md:text-lg lg:text-xl transition-colors"
+              >
                 Home
               </a>
             </li>
             <li className="inline-block">
               <a
                 href="/project"
-                className="paragraph text-lg  transition-colors"
+                className="paragraph text-sm md:text-lg lg:text-xl transition-colors"
               >
                 Portfolio
               </a>

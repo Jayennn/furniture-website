@@ -40,13 +40,11 @@ export function PortofolioSection() {
                 Portofolio
               </h2>
             </TextReveal>
-            <TextReveal>
-              <p className="paragraph md:max-w-lg text-lg lg:text-xl">
-                More than buildings, we design human experiences. Our studio
-                crafts thoughtful environments that connect, inspire, and
-                resonate for a lifetime.
-              </p>
-            </TextReveal>
+            <p className="paragraph md:max-w-lg text-sm md:text-lg lg:text-xl">
+              More than buildings, we design human experiences. Our studio
+              crafts thoughtful environments that connect, inspire, and resonate
+              for a lifetime.
+            </p>
           </div>
           <hr className="border-gray-200" />
         </div>

@@ -29,7 +29,7 @@ export function HeroSection() {
       <div className="container px-4 sm:px-6 lg:px-0">
         <div className="mb-16 flex flex-col gap-6 sm:gap-8 lg:flex-row sm:items-start lg:items-center sm:justify-between lg:gap-12">
           <TextReveal>
-            <h1 className="text-white md:text-[#1A1A1A] heading w-full lg:max-w-2xl shrink-0 text-6xl">
+            <h1 className="text-white md:text-[#1A1A1A] heading w-full lg:max-w-2xl shrink-0 text-4xl sm:text-5xl lg:text-6xl">
               Beautiful Furniture for Your Home
             </h1>
           </TextReveal>

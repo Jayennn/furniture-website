@@ -15,14 +15,12 @@ export function CtaSection() {
                 Spaces We Shape
               </h2>
             </TextReveal>
-            <div className="mt-6 flex flex-col gap-6 sm:gap-8">
+            <div className="mt-4 flex flex-col gap-6 sm:gap-8">
               <TextReveal start="top center">
-                <p className="paragraph text-lg lg:text-xl">
+                <p className="paragraph text-sm md:text-lg lg:text-xl">
                   Each space is shaped with intention — where proportion,
                   material, and light come together to create a calm and
-                  balanced living environment. Our furniture is designed to
-                  belong naturally within a space, enhancing how it feels,
-                  moves, and is experienced every day.
+                  balanced living environment.
                 </p>
               </TextReveal>
               <button
