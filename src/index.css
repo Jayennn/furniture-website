@@ -11,12 +11,18 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.hero-landing,
 .hero-portofolio,
 .cta-section {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+
+.hero-landing {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./assets/hero-landing.webp");
 }
 
 .hero-portofolio {
@@ -27,6 +33,52 @@ html {
 .cta-section {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("./assets/cta-image.webp");
+}
+
+.revealers {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  opacity: 0;
+}
+
+.revealer {
+  flex: 1;
+  width: 100%;
+  background-color: #ffffff;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.container-hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.img-container {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  visibility: visible;
+  will-change: transform;
 }
 
 @layer components {

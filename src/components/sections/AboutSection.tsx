@@ -1,6 +1,36 @@
 import AboutImage from "@/assets/about-image.webp";
+import TextReveal from "../animation/TextReveal";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 export function AboutSection() {
+  const brandStrengthRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    if (!brandStrengthRef.current) return;
+
+    const cards = brandStrengthRef.current.querySelectorAll(
+      "[data-strength-card]"
+    );
+
+    gsap.from(cards, {
+      opacity: 0,
+      y: 50,
+      duration: 0.7,
+      ease: "power4.out",
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: brandStrengthRef.current,
+        start: "top 50%",
+        once: true,
+      },
+    });
+  });
+
   return (
     <section
       className="py-12 sm:py-20 md:py-32 lg:py-48"
@@ -11,13 +41,17 @@ export function AboutSection() {
           {/* Brand Info */}
           <div className="flex w-full flex-col xl:w-1/2">
             <div className="mb-6 flex h-auto flex-col justify-center space-y-4 lg:mb-0 lg:h-96">
-              <h2 className="heading tracking-[4%] text-4xl sm:text-5xl lg:text-6xl">
-                Carpentiére
-              </h2>
-              <p className="paragraph mb-8 lg:mb-12 text-lg lg:text-xl">
-                We are a design studio focused on creating furniture and
-                interior spaces that feel calm, balanced, and timeless.
-              </p>
+              <TextReveal>
+                <h2 className="heading tracking-[4%] text-4xl sm:text-5xl lg:text-6xl">
+                  Carpentiére
+                </h2>
+              </TextReveal>
+              <TextReveal>
+                <p className="paragraph mb-8 lg:mb-12 text-lg lg:text-xl">
+                  We are a design studio focused on creating furniture and
+                  interior spaces that feel calm, balanced, and timeless.
+                </p>
+              </TextReveal>
             </div>
             <img
               className="w-full rounded-lg object-cover"
@@ -29,9 +63,13 @@ export function AboutSection() {
           </div>
 
           {/* Strength Brand */}
-          <div className="grid w-full grid-cols-2 xl:w-1/2">
+          <div
+            ref={brandStrengthRef}
+            className="grid w-full grid-cols-2 xl:w-1/2"
+          >
             {/* Our Work */}
             <div
+              data-strength-card
               className="flex flex-col justify-end gap-4 border-0 border-r border-t border-b border-gray-200 px-3 py-5 sm:gap-6 sm:px-4"
               role="article"
             >
@@ -45,6 +83,7 @@ export function AboutSection() {
             </div>
             {/* Projects Count */}
             <div
+              data-strength-card
               className="flex flex-col justify-end gap-4 border-0 border-t border-b border-gray-200 px-3 py-5 sm:gap-6 sm:px-4"
               role="article"
             >
@@ -58,6 +97,7 @@ export function AboutSection() {
             </div>
             {/* Experience 1 */}
             <div
+              data-strength-card
               className="flex flex-col justify-end gap-4 border-0 border-r border-b border-gray-200 px-3 py-5 sm:gap-6 sm:px-4"
               role="article"
             >
@@ -71,6 +111,7 @@ export function AboutSection() {
             </div>
             {/* Design Philosophy */}
             <div
+              data-strength-card
               className="flex flex-col justify-end gap-4 border-0 border-b border-gray-200 px-3 py-5 sm:gap-6 sm:px-4"
               role="article"
             >

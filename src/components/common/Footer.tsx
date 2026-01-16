@@ -1,5 +1,6 @@
 import image from "@/assets/assets.webp";
 import { Instagram } from "lucide-react";
+import TextReveal from "../animation/TextReveal";
 
 export function Footer() {
   return (
@@ -10,12 +11,16 @@ export function Footer() {
           {/* left */}
           <div className="flex w-full flex-col justify-between lg:max-w-2xl">
             <div className="space-y-4">
-              <h3 className="heading text-5xl sm:text-6xl lg:text-7xl">
-                Contact Us
-              </h3>
-              <p className="paragraph max-w-sm text-lg lg:text-xl">
-                Get in touch with us for any enquiries and questions
-              </p>
+              <TextReveal>
+                <h3 className="heading text-4xl sm:text-5xl lg:text-6xl">
+                  Contact Us
+                </h3>
+              </TextReveal>
+              <TextReveal>
+                <p className="paragraph max-w-sm text-lg lg:text-xl">
+                  Get in touch with us for any enquiries and questions
+                </p>
+              </TextReveal>
             </div>
 
             <a
