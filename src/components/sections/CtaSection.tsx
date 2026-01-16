@@ -10,13 +10,13 @@ export function CtaSection() {
       <div className="container px-4 sm:px-6 lg:px-0">
         <div className="flex flex-col items-center gap-8 lg:flex-row lg:gap-12">
           <div className="w-full lg:w-1/2">
-            <TextReveal start="top 100%">
+            <TextReveal start="top center">
               <h2 className="heading text-4xl sm:text-5xl lg:text-6xl">
                 Spaces We Shape
               </h2>
             </TextReveal>
             <div className="mt-6 flex flex-col gap-6 sm:gap-8">
-              <TextReveal>
+              <TextReveal start="top center">
                 <p className="paragraph text-lg lg:text-xl">
                   Each space is shaped with intention — where proportion,
                   material, and light come together to create a calm and

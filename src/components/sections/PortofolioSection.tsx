@@ -29,7 +29,7 @@ const portofolioItems = [
 export function PortofolioSection() {
   return (
     <section
-      className="py-12 sm:py-20 md:py-32 lg:py-52"
+      className="py-8 sm:py-20 md:py-32 lg:py-52"
       aria-label="Portfolio section"
     >
       <div className="container px-4 sm:px-6 lg:px-0">

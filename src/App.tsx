@@ -32,7 +32,7 @@ function App() {
 
   useEffect(() => {
     function update(time: number) {
-      lenisRef.current?.lenis?.raf(time * 2000);
+      lenisRef.current?.lenis?.raf(time * 500);
     }
 
     gsap.ticker.add(update);

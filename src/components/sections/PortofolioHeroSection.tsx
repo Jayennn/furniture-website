@@ -3,16 +3,16 @@ import TextReveal from "../animation/TextReveal";
 export function PortofolioHeroSection() {
   return (
     <section className="min-h-152 sm:min-h-180 md:min-h-192 lg:min-h-200 hero-portofolio flex">
-      <div className="flex flex-col justify-center md:flex-col lg:flex-row lg:items-center md:justify-end lg:justify-between container px-4 sm:px-6 lg:px-0 gap-6 md:gap-8 py-0">
+      <div className="flex flex-col md:flex-col lg:flex-row lg:items-center justify-end lg:justify-between container px-4 sm:px-6 lg:px-0 gap-6 md:gap-8 py-0">
         {/* heading */}
-        <div className="flex flex-col justify-center items-baseline space-y-3 sm:space-y-4">
+        <div className="w-full flex flex-col justify-center items-baseline space-y-3 sm:space-y-4">
           <TextReveal>
             <span className="paragraph text-white text-base sm:text-lg lg:text-xl">
               Furniture & Property
             </span>
           </TextReveal>
           <TextReveal>
-            <h1 className="max-w-sm md:max-w-xl heading text-white text-4xl sm:text-5xl lg:text-6xl">
+            <h1 className="max-w-md md:max-w-xl heading text-white text-4xl sm:text-5xl lg:text-6xl">
               We design with the future in mind.
             </h1>
           </TextReveal>

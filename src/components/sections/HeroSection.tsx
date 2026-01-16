@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import heroImage from "@/assets/assets.webp";
+import heroImage from "@/assets/hero-landing.webp";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import TextReveal from "../animation/TextReveal";
@@ -27,7 +27,7 @@ export function HeroSection() {
       aria-label="Hero section"
     >
       <div className="container px-4 sm:px-6 lg:px-0">
-        <div className="mb-16 flex flex-col gap-6 sm:gap-8 lg:flex-row sm:items-center sm:justify-between lg:gap-12">
+        <div className="mb-16 flex flex-col gap-6 sm:gap-8 lg:flex-row sm:items-start lg:items-center sm:justify-between lg:gap-12">
           <TextReveal>
             <h1 className="text-white md:text-[#1A1A1A] heading w-full lg:max-w-2xl shrink-0 text-6xl">
               Beautiful Furniture for Your Home
@@ -46,7 +46,7 @@ export function HeroSection() {
           alt="Beautiful handcrafted furniture collection for home"
           className="hidden md:block shadow-md max-h-64 w-full rounded-lg object-cover sm:max-h-124 md:h-full "
           // loading="lazy"
-          decoding="async"
+          // decoding="async"
         />
       </div>
     </section>
