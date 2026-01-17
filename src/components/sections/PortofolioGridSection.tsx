@@ -110,13 +110,11 @@ export function PortofolioGridSection() {
                     </p>
                   </div>
 
-                  <TextReveal start="top 90%">
-                    <p className="max-w-3xl paragraph text-sm sm:text-base md:text-lg text-justify">
-                      More than buildings, we design human experiences. Our
-                      studio crafts thoughtful environments that connect,
-                      inspire, and resonate for a lifetime.
-                    </p>
-                  </TextReveal>
+                  <p className="max-w-xl paragraph text-sm sm:text-base lg:text-lg">
+                    More than buildings, we design human experiences. Our studio
+                    crafts thoughtful environments that connect, inspire, and
+                    resonate for a lifetime.
+                  </p>
                 </div>
               </div>
 
