@@ -25,8 +25,6 @@ export function HeroSection() {
           src={heroImage}
           alt="Beautiful handcrafted furniture collection for home"
           className="hidden md:block shadow-md max-h-64 w-full rounded-lg object-cover sm:max-h-124 md:h-full "
-          // loading="lazy"
-          // decoding="async"
         />
       </div>
     </section>

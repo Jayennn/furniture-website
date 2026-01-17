@@ -106,8 +106,8 @@ export function Footer() {
               className="mt-8 max-h-64 w-full rounded-lg object-cover sm:mt-12 sm:max-h-72 lg:mt-40 lg:max-h-80"
               src={image}
               alt="Carpentiére furniture portfolio showcase"
-              loading="lazy"
-              decoding="async"
+              // loading="lazy"
+              // decoding="async"
             />
           </div>
         </div>
