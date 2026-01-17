@@ -57,8 +57,8 @@ export function AboutSection() {
               className="w-full rounded-lg object-cover"
               src={AboutImage}
               alt="Carpentiére design studio workspace showcasing furniture craftsmanship"
-              loading="lazy"
-              decoding="async"
+              // loading="lazy"
+              // decoding="async"
             />
           </div>
 
