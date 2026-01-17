@@ -1,26 +1,7 @@
-import { useRef } from "react";
 import heroImage from "@/assets/hero-landing.webp";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 import TextReveal from "../animation/TextReveal";
 
-gsap.registerPlugin(useGSAP);
-
 export function HeroSection() {
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  useGSAP(() => {
-    // scale timeline
-    const scaleTl = gsap.timeline();
-
-    scaleTl.to(imgRef.current, {
-      scale: 1,
-      duration: 2,
-      ease: "power4.inOut",
-      transformOrigin: "center center",
-    });
-  });
-
   return (
     <section
       className="hero-landing md:bg-white! md:bg-none! flex flex-col justify-center md:justify-between pt-32 sm:pt-36 md:pt-40 lg:pt-44 pb-12 sm:pb-16 md:py-12 min-h-[55dvh] lg:min-h-48"
@@ -41,7 +22,6 @@ export function HeroSection() {
           </TextReveal>
         </div>
         <img
-          ref={imgRef}
           src={heroImage}
           alt="Beautiful handcrafted furniture collection for home"
           className="hidden md:block shadow-md max-h-64 w-full rounded-lg object-cover sm:max-h-124 md:h-full "
