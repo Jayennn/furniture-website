@@ -1,9 +1,15 @@
 import portofolioImage4 from "@/assets/portofolio-image-4.webp";
 import TextReveal from "../animation/TextReveal";
+import { useImagesLoaded } from "@/hooks";
+import { useRef } from "react";
 
 export function CtaSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+  useImagesLoaded(sectionRef);
+
   return (
     <section
+      ref={sectionRef}
       className="py-12 sm:py-20 md:py-32 lg:py-52"
       aria-label="Call to action section"
     >
