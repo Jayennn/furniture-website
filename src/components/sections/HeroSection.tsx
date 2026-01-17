@@ -34,7 +34,7 @@ export function HeroSection() {
             </h1>
           </TextReveal>
           <TextReveal>
-            <p className="text-white md:text-[#1A1A1A] paragraph lg:max-w-lg text-lg lg:text-xl">
+            <p className="text-white md:text-[#1A1A1A] paragraph text-sm md:text-lg lg:text-xl">
               Discover our exquisite collection of handcrafted furniture
               designed to bring elegance and comfort to your living space.
             </p>

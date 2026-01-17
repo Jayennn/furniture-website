@@ -17,7 +17,7 @@ export default function TextReveal({
   children,
   animateOnScroll = true,
   delay = 0,
-  start = "top 40%",
+  start = "top 70%",
 }: TextRevealProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const elementRef = useRef<HTMLElement[]>([]);
@@ -74,9 +74,9 @@ export default function TextReveal({
       const animationProps: gsap.TweenVars = {
         yPercent: 0,
         ease: "power4.out",
-        duration: 1,
+        duration: 1.2,
         delay,
-        stagger: 0.1,
+        stagger: 0.15,
       };
 
       // Animate based on scroll or immediately
@@ -86,6 +86,10 @@ export default function TextReveal({
           scrollTrigger: {
             trigger: containerRef.current,
             start: start,
+            markers: true,
+            // pin: true,
+            // scrub: 1,
+            // end: "top 20%",
             once: true,
           },
         });

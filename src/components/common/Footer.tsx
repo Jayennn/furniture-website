@@ -4,20 +4,20 @@ import TextReveal from "../animation/TextReveal";
 
 export function Footer() {
   return (
-    <footer className="py-16 lg:py-32" role="contentinfo" aria-label="Footer">
+    <footer className="py-12 lg:py-32" role="contentinfo" aria-label="Footer">
       <div className="container px-4 sm:px-6 lg:px-0">
         <hr className="border-gray-200 my-12 lg:my-32" />
         <div className="flex flex-col gap-12 lg:flex-row lg:gap-0">
           {/* left */}
           <div className="flex w-full flex-col justify-between lg:max-w-2xl">
             <div className="space-y-4">
-              <TextReveal start="top center">
+              <TextReveal start="top 85%">
                 <h3 className="heading text-4xl sm:text-5xl lg:text-6xl">
                   Contact Us
                 </h3>
               </TextReveal>
-              <TextReveal start="top center">
-                <p className="paragraph max-w-sm text-lg lg:text-xl">
+              <TextReveal start="top 90%">
+                <p className="paragraph max-w-xs md:max-w-sm text-sm md:text-lg lg:text-xl">
                   Get in touch with us for any enquiries and questions
                 </p>
               </TextReveal>

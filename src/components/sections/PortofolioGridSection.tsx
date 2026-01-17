@@ -24,7 +24,7 @@ export function PortofolioGridSection() {
         const images = container.querySelectorAll("[data-image]");
 
         gsap.from(images, {
-          scale: 1.5,
+          // scale: 1.5,
           opacity: 0,
           y: 50,
           duration: 1,

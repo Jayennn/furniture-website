@@ -46,10 +46,12 @@ export function AboutSection() {
                   Carpentiére
                 </h2>
               </TextReveal>
-              <p className="paragraph mb-8 lg:mb-12 text-sm md:text-lg lg:text-xl">
-                We are a design studio focused on creating furniture and
-                interior spaces that feel calm, balanced, and timeless.
-              </p>
+              <TextReveal>
+                <p className="paragraph mb-8 lg:mb-12 text-sm md:text-lg lg:text-xl">
+                  We are a design studio focused on creating furniture and
+                  interior spaces that feel calm, balanced, and timeless.
+                </p>
+              </TextReveal>
             </div>
             <img
               className="w-full rounded-lg object-cover"
