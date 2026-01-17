@@ -1,4 +1,4 @@
-import projectImage from "@/assets/project.png";
+import projectImage from "@/assets/project.webp";
 import projectImage2 from "@/assets/project2.webp";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
