@@ -11,12 +11,12 @@ export function Footer() {
           {/* left */}
           <div className="flex w-full flex-col justify-between lg:max-w-2xl">
             <div className="space-y-4">
-              <TextReveal start="top 85%">
+              <TextReveal>
                 <h3 className="heading text-4xl sm:text-5xl lg:text-6xl">
                   Contact Us
                 </h3>
               </TextReveal>
-              <TextReveal start="top 90%">
+              <TextReveal>
                 <p className="paragraph max-w-xs md:max-w-sm text-sm md:text-lg lg:text-xl">
                   Get in touch with us for any enquiries and questions
                 </p>

@@ -65,9 +65,9 @@ export function PortofolioGridSection() {
                 {/* Image */}
                 <div
                   data-image-container
-                  className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 h-64 sm:h-80 md:h-96 lg:h-full overflow-x-auto md:overflow-hidden"
+                  className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 h-64 sm:h-80 md:h-96 lg:h-full overflow-x-auto overflow-hidden"
                 >
-                  <div className="col-span-2 overflow-hidden">
+                  <div className="col-span-3 md:col-span-2 overflow-hidden">
                     <img
                       data-image
                       className="object-cover w-full h-full"
@@ -77,7 +77,7 @@ export function PortofolioGridSection() {
                   </div>
                   <img
                     data-image
-                    className="col-span-1 object-cover w-full h-full"
+                    className="hidden md:block col-span-1 object-cover w-full h-full"
                     src={projectImage2}
                     alt="Functional and elegant design for productive work environments"
                   />

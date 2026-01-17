@@ -62,8 +62,8 @@ export function PortofolioSection() {
                 className="w-full rounded-lg object-cover"
                 src={item.image}
                 alt={item.description}
-                loading="lazy"
-                decoding="async"
+                // loading="lazy"
+                // decoding="async"
               />
               <div className="flex flex-row justify-between gap-3 sm:gap-4 sm:items-center">
                 <p className="paragraph text-base uppercase tracking-wide">

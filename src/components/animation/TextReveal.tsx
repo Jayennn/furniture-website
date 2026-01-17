@@ -74,9 +74,9 @@ export default function TextReveal({
       const animationProps: gsap.TweenVars = {
         yPercent: 0,
         ease: "power4.out",
-        duration: 1.2,
+        duration: 1.8,
         delay,
-        stagger: 0.15,
+        stagger: 0.2,
       };
 
       // Animate based on scroll or immediately
