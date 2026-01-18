@@ -5,7 +5,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight } from "lucide-react";
 import { Fragment, useRef } from "react";
-import TextReveal from "../animation/TextReveal";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -22,7 +21,6 @@ export function PortofolioGridSection() {
 
       imageContainers.forEach((container) => {
         const images = container.querySelectorAll("[data-image]");
-
         gsap.from(images, {
           // scale: 1.5,
           opacity: 0,
@@ -87,11 +85,9 @@ export function PortofolioGridSection() {
               {/* Description */}
               <div className="space-y-4 sm:space-y-5">
                 <div className="flex flex-row items-center justify-between gap-3 sm:gap-4">
-                  <TextReveal start="top 90%">
-                    <h3 className="heading uppercase text-lg sm:text-xl md:text-2xl">
-                      Luxury Bedroom
-                    </h3>
-                  </TextReveal>
+                  <h3 className="heading uppercase text-lg sm:text-xl md:text-2xl">
+                    Luxury Bedroom
+                  </h3>
                   <button
                     className="paragraph inline-flex w-fit items-center justify-center gap-2 text-sm sm:text-base uppercase transition-all duration-300 whitespace-nowrap hover:bg-black hover:text-white"
                     aria-label="View Detail"
