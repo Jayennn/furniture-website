@@ -86,11 +86,10 @@ export default function TextReveal({
           scrollTrigger: {
             trigger: containerRef.current,
             start: start,
-            markers: true,
-            // pin: true,
-            // scrub: 1,
-            // end: "top 20%",
+            markers: false,
+            toggleActions: "play none none none",
             once: true,
+            invalidateOnRefresh: true,
           },
         });
       } else {
@@ -107,7 +106,7 @@ export default function TextReveal({
     {
       scope: containerRef,
       dependencies: [animateOnScroll, delay],
-    }
+    },
   );
 
   if (React.Children.count(children) === 1) {
