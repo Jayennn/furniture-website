@@ -11,6 +11,14 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@supports (height: 100dvh) {
+  @media (orientation: landscape) and (max-height: 500px) {
+    html {
+      overflow-y: auto;
+    }
+  }
+}
+
 .hero-landing,
 .hero-portofolio,
 .cta-section {
@@ -21,17 +29,20 @@ html {
 }
 
 .hero-landing {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("./assets/hero-landing.webp");
 }
 
 .hero-portofolio {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("./assets/hero-portofolio.webp");
 }
 
 .cta-section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("./assets/cta-image.webp");
 }
 

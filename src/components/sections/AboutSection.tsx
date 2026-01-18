@@ -1,5 +1,4 @@
 import AboutImage from "@/assets/about-image.webp";
-import TextReveal from "../animation/TextReveal";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -14,7 +13,7 @@ export function AboutSection() {
     if (!brandStrengthRef.current) return;
 
     const cards = brandStrengthRef.current.querySelectorAll(
-      "[data-strength-card]"
+      "[data-strength-card]",
     );
 
     gsap.from(cards, {
@@ -33,7 +32,7 @@ export function AboutSection() {
 
   return (
     <section
-      className="py-12 sm:py-20 md:py-32 lg:py-48"
+      className="py-12 sm:py-20 md:py-32 lg:py-48 landscape:py-4 landscape:sm:py-6"
       aria-label="About Carpentiére"
     >
       <div className="container px-4 sm:px-6 lg:px-0">
@@ -41,17 +40,13 @@ export function AboutSection() {
           {/* Brand Info */}
           <div className="flex w-full flex-col xl:w-1/2">
             <div className="mb-6 flex h-auto flex-col justify-center space-y-4 lg:mb-0 lg:h-96">
-              <TextReveal>
-                <h2 className="heading tracking-[4%] text-4xl sm:text-5xl lg:text-6xl">
-                  Carpentiére
-                </h2>
-              </TextReveal>
-              <TextReveal>
-                <p className="paragraph mb-8 lg:mb-12 text-sm md:text-lg lg:text-xl">
-                  We are a design studio focused on creating furniture and
-                  interior spaces that feel calm, balanced, and timeless.
-                </p>
-              </TextReveal>
+              <h2 className="heading tracking-[4%] text-4xl sm:text-5xl lg:text-6xl">
+                Carpentiére
+              </h2>
+              <p className="paragraph mb-8 lg:mb-12 text-sm md:text-lg lg:text-xl">
+                We are a design studio focused on creating furniture and
+                interior spaces that feel calm, balanced, and timeless.
+              </p>
             </div>
             <img
               className="w-full rounded-lg object-cover"
