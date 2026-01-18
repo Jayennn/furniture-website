@@ -31,13 +31,13 @@ export function PortofolioSection() {
       className="py-8 sm:py-20 md:py-32 lg:py-52"
       aria-label="Portfolio section"
     >
-      <div className="container px-4 sm:px-6 lg:px-0">
-        <div className="mb-12 flex flex-col gap-8 sm:gap-12 lg:mb-20 lg:gap-16">
+      <div className="container px-4 sm:px-6">
+        <div className="flex flex-col gap-8 mb-12 sm:gap-12 lg:mb-20 lg:gap-16">
           <div className="flex flex-col space-y-4 lg:flex-row lg:items-center lg:justify-between lg:space-y-0">
             <h2 className="heading shrink-0 text-4xl sm:text-5xl lg:text-6xl">
               Portofolio
             </h2>
-            <p className="paragraph md:max-w-lg text-sm md:text-lg lg:text-xl">
+            <p className="paragraph text-sm md:max-w-lg md:text-lg lg:text-xl">
               More than buildings, we design human experiences. Our studio
               crafts thoughtful environments that connect, inspire, and resonate
               for a lifetime.
@@ -46,11 +46,11 @@ export function PortofolioSection() {
           <hr className="border-gray-200" />
         </div>
 
-        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {portofolioItems.map((item) => (
             <article
               key={item.id}
-              className="flex flex-col gap-4 group hover:opacity-80 transition-opacity"
+              className="flex flex-col gap-4 transition-opacity group hover:opacity-80"
               role="article"
             >
               <img
@@ -65,7 +65,7 @@ export function PortofolioSection() {
                   {item.title}
                 </p>
                 <button
-                  className="paragraph flex w-fit items-center gap-2 text-base uppercase underline underline-offset-4 transition-opacity hover:opacity-70 sm:underline-offset-8"
+                  className="paragraph flex w-fit items-center gap-2 text-base uppercase transition-opacity underline underline-offset-4 hover:opacity-70 sm:underline-offset-8"
                   aria-label={`View ${item.title} project`}
                 >
                   View Project

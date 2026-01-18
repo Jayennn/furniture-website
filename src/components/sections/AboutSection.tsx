@@ -32,18 +32,18 @@ export function AboutSection() {
 
   return (
     <section
-      className="py-12 sm:py-20 md:py-32 lg:py-48 landscape:py-4 landscape:sm:py-6"
+      className="py-12 sm:py-20 md:py-32 lg:py-48"
       aria-label="About Carpentiére"
     >
-      <div className="container px-4 sm:px-6 lg:px-0">
-        <div className="flex flex-col gap-6 xl:flex-row lg:gap-12">
+      <div className="container px-4 sm:px-6">
+        <div className="flex flex-col gap-6 lg:gap-12 xl:flex-row">
           {/* Brand Info */}
           <div className="flex w-full flex-col xl:w-1/2">
-            <div className="mb-6 flex h-auto flex-col justify-center space-y-4 lg:mb-0 lg:h-96">
-              <h2 className="heading tracking-[4%] text-4xl sm:text-5xl lg:text-6xl">
+            <div className="flex h-auto flex-col justify-center mb-6 space-y-4 lg:mb-0 lg:h-96">
+              <h2 className="heading text-4xl tracking-[4%] sm:text-5xl lg:text-6xl">
                 Carpentiére
               </h2>
-              <p className="paragraph mb-8 lg:mb-12 text-sm md:text-lg lg:text-xl">
+              <p className="paragraph text-sm mb-8 md:text-lg lg:mb-12 lg:text-xl">
                 We are a design studio focused on creating furniture and
                 interior spaces that feel calm, balanced, and timeless.
               </p>
@@ -65,7 +65,7 @@ export function AboutSection() {
             {/* Our Work */}
             <div
               data-strength-card
-              className="flex flex-col justify-end gap-4 border-0 border-r border-t border-b border-gray-200 px-3 py-5 sm:gap-6 sm:px-4"
+              className="flex flex-col justify-end gap-4 px-3 py-5 border-0 border-r border-t border-b border-gray-200 sm:gap-6 sm:px-4"
               role="article"
             >
               <h3 className="heading text-lg sm:text-2xl lg:text-3xl">
@@ -79,7 +79,7 @@ export function AboutSection() {
             {/* Projects Count */}
             <div
               data-strength-card
-              className="flex flex-col justify-end gap-4 border-0 border-t border-b border-gray-200 px-3 py-5 sm:gap-6 sm:px-4"
+              className="flex flex-col justify-end gap-4 px-3 py-5 border-0 border-t border-b border-gray-200 sm:gap-6 sm:px-4"
               role="article"
             >
               <h3 className="heading text-lg sm:text-2xl lg:text-3xl">
@@ -93,7 +93,7 @@ export function AboutSection() {
             {/* Experience 1 */}
             <div
               data-strength-card
-              className="flex flex-col justify-end gap-4 border-0 border-r border-b border-gray-200 px-3 py-5 sm:gap-6 sm:px-4"
+              className="flex flex-col justify-end gap-4 px-3 py-5 border-0 border-r border-b border-gray-200 sm:gap-6 sm:px-4"
               role="article"
             >
               <h3 className="heading text-lg sm:text-2xl lg:text-3xl">
@@ -107,7 +107,7 @@ export function AboutSection() {
             {/* Design Philosophy */}
             <div
               data-strength-card
-              className="flex flex-col justify-end gap-4 border-0 border-b border-gray-200 px-3 py-5 sm:gap-6 sm:px-4"
+              className="flex flex-col justify-end gap-4 px-3 py-5 border-0 border-b border-gray-200 sm:gap-6 sm:px-4"
               role="article"
             >
               <h3 className="heading text-lg sm:text-2xl lg:text-3xl">

@@ -11,14 +11,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@supports (height: 100dvh) {
-  @media (orientation: landscape) and (max-height: 500px) {
-    html {
-      overflow-y: auto;
-    }
-  }
-}
-
 .hero-landing,
 .hero-portofolio,
 .cta-section {

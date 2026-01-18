@@ -3,15 +3,15 @@ import heroImage from "@/assets/hero-landing.webp";
 export function HeroSection() {
   return (
     <section
-      className="hero-landing md:bg-white! md:bg-none! flex flex-col justify-center md:justify-between pt-32 sm:pt-36 md:pt-40 lg:pt-44 pb-12 sm:pb-16 md:py-12 min-h-[55dvh] lg:min-h-48 landscape:pt-4 landscape:pb-4 landscape:min-h-auto"
+      className="flex flex-col justify-center min-h-[55dvh] pt-32 pb-12 hero-landing sm:pt-36 sm:pb-16 md:justify-between md:bg-white! md:bg-none! md:pt-40 md:py-12 lg:pt-44 lg:min-h-48"
       aria-label="Hero section"
     >
-      <div className="container px-4 sm:px-6 lg:px-0">
-        <div className="mb-16 flex flex-col gap-6 sm:gap-8 lg:flex-row sm:items-start lg:items-center sm:justify-between lg:gap-12">
-          <h1 className="text-white md:text-[#1A1A1A] heading w-full lg:max-w-2xl shrink-0 text-4xl sm:text-5xl lg:text-6xl">
+      <div className="container px-4 sm:px-6">
+        <div className="flex flex-col gap-6 mb-16 sm:gap-8 sm:items-start sm:justify-between lg:flex-row lg:items-center lg:gap-12">
+          <h1 className="heading w-full text-4xl text-white shrink-0 sm:text-5xl md:text-[#1A1A1A] lg:max-w-2xl lg:text-6xl">
             Beautiful Furniture for Your Home
           </h1>
-          <p className="max-w-md text-white md:text-[#1A1A1A] paragraph text-sm md:text-lg lg:text-xl">
+          <p className="paragraph max-w-md text-sm text-white sm:text-base md:text-[#1A1A1A] md:text-lg lg:text-xl">
             Discover our exquisite collection of handcrafted furniture designed
             to bring elegance and comfort to your living space.
           </p>
@@ -19,7 +19,7 @@ export function HeroSection() {
         <img
           src={heroImage}
           alt="Beautiful handcrafted furniture collection for home"
-          className="hidden md:block shadow-md max-h-64 w-full rounded-lg object-cover sm:max-h-124 md:h-full "
+          className="hidden w-full max-h-64 rounded-lg object-cover shadow-md sm:max-h-124 md:block md:h-full"
         />
       </div>
     </section>

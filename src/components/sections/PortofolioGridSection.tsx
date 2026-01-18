@@ -16,7 +16,7 @@ export function PortofolioGridSection() {
       if (!sectionRef.current) return;
 
       const imageContainers = sectionRef.current.querySelectorAll(
-        "[data-image-container]"
+        "[data-image-container]",
       );
 
       imageContainers.forEach((container) => {
@@ -36,12 +36,12 @@ export function PortofolioGridSection() {
         });
       });
     },
-    { scope: sectionRef }
+    { scope: sectionRef },
   );
 
   return (
     <section ref={sectionRef} className="py-18 sm:py-20 md:py-32 lg:py-48">
-      <div className="container px-4 sm:px-6 lg:px-0">
+      <div className="container px-4 sm:px-6">
         <div className="mb-12 flex flex-col gap-8 sm:gap-12 lg:mb-20 lg:gap-16">
           <div className="flex flex-col space-y-4 lg:flex-row lg:items-center lg:justify-between lg:space-y-0">
             <h2 className="heading shrink-0 text-3xl sm:text-4xl lg:text-6xl">

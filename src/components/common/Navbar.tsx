@@ -7,16 +7,16 @@ export function Navbar() {
       role="navigation"
       aria-label="Main navigation"
     >
-      <div className="container px-4 sm:px-6 lg:px-0 py-4 sm:py-6">
+      <div className="container px-4 py-4 sm:px-6 sm:py-6">
         <div className="flex items-center justify-between">
-          <h1 className="heading uppercase tracking-wide text-xl font-light">
+          <h1 className="heading text-xl font-light uppercase tracking-wide">
             Bethany Furniture
           </h1>
-          <ul className=" items-center space-x-6 md:space-x-10">
+          <ul className="flex items-center space-x-6 md:space-x-10">
             <li className="inline-block">
               <a
                 href="/"
-                className="paragraph text-sm md:text-lg lg:text-xl transition-colors"
+                className="paragraph text-sm transition-colors md:text-lg lg:text-xl"
               >
                 Home
               </a>
@@ -24,7 +24,7 @@ export function Navbar() {
             <li className="inline-block">
               <a
                 href="/project"
-                className="paragraph text-sm md:text-lg lg:text-xl transition-colors"
+                className="paragraph text-sm transition-colors md:text-lg lg:text-xl"
               >
                 Portfolio
               </a>
