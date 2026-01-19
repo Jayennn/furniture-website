@@ -4,11 +4,72 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight } from "lucide-react";
-import { Fragment, useRef } from "react";
-
+import { Fragment, useRef, useState } from "react";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
+import {
+  Dialog,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogContent,
+  DialogDescription,
+} from "@/components/ui/dialog";
+import {
+  Drawer,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
+interface Portfolio {
+  id: number;
+  title: string;
+  category: string;
+  description: string;
+  detailedDescription: string;
+  images: string[];
+}
+
+const PORTFOLIO_ITEMS: Portfolio[] = [
+  {
+    id: 1,
+    title: "Luxury Bedroom",
+    category: "Residential Furniture Design",
+    description:
+      "More than buildings, we design human experiences. Our studio crafts thoughtful environments that connect, inspire, and resonate for a lifetime.",
+    detailedDescription:
+      "Our luxury bedroom collection represents the pinnacle of contemporary furniture design. Featuring premium materials including sustainably sourced hardwoods, fine fabrics, and bespoke upholstery, each piece is meticulously crafted to provide ultimate comfort and elegance. This project showcases our expertise in creating cohesive interior environments that blend aesthetic sophistication with functional excellence.",
+    images: [projectImage, projectImage2],
+  },
+  {
+    id: 2,
+    title: "Modern Office Space",
+    category: "Commercial Property Design",
+    description:
+      "Functional and elegant design for productive work environments. Creating spaces that enhance creativity and collaboration.",
+    detailedDescription:
+      "This commercial property project demonstrates our comprehensive approach to workspace design. We integrated ergonomic furniture solutions with cutting-edge architectural elements to create an environment that maximizes productivity and employee well-being. Our design strategy focuses on optimizing property value through innovative spatial planning and sustainable building practices.",
+    images: [projectImage, projectImage2],
+  },
+  {
+    id: 3,
+    title: "Contemporary Living",
+    category: "Residential Property Development",
+    description:
+      "Innovative solutions for modern living. Designs that balance aesthetics with practicality for everyday comfort.",
+    detailedDescription:
+      "This residential property development project showcases our holistic design philosophy. From architectural planning to bespoke furniture curation, we created a comprehensive living experience that respects both modern aesthetics and timeless comfort. Our team coordinated multiple design elements to ensure seamless integration between property structure and interior furnishings.",
+    images: [projectImage, projectImage2],
+  },
+];
+
 export function PortofolioGridSection() {
+  const [openItemId, setOpenItemId] = useState<number | null>(null);
+  const isDesktop = useMediaQuery("(min-width: 768px)");
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
@@ -56,8 +117,8 @@ export function PortofolioGridSection() {
           <hr className="border-gray-200" />
         </div>
         <div className="grid grid-cols-1 gap-8">
-          {Array.from({ length: 3 }).map((_, index) => (
-            <Fragment key={index}>
+          {PORTFOLIO_ITEMS.map((item) => (
+            <Fragment key={item.id}>
               {/* Item */}
               <article role="article">
                 {/* Image */}
@@ -69,15 +130,16 @@ export function PortofolioGridSection() {
                     <img
                       data-image
                       className="object-cover w-full h-full"
-                      src={projectImage}
-                      alt="Functional and elegant design for productive work environments"
+                      src={item.images[0]}
+                      alt={item.title}
                     />
                   </div>
+
                   <img
                     data-image
                     className="hidden md:block col-span-1 object-cover w-full h-full"
-                    src={projectImage2}
-                    alt="Functional and elegant design for productive work environments"
+                    src={item.images[1]}
+                    alt={item.title}
                   />
                 </div>
               </article>
@@ -86,15 +148,92 @@ export function PortofolioGridSection() {
               <div className="space-y-4 sm:space-y-5">
                 <div className="flex flex-row items-center justify-between gap-3 sm:gap-4">
                   <h3 className="heading uppercase text-lg sm:text-xl md:text-2xl">
-                    Luxury Bedroom
+                    {item.title}
                   </h3>
-                  <button
-                    className="paragraph inline-flex w-fit items-center justify-center gap-2 text-sm sm:text-base uppercase transition-all duration-300 whitespace-nowrap hover:bg-black hover:text-white"
-                    aria-label="View Detail"
-                  >
-                    View Detail
-                    <ArrowUpRight strokeWidth={1} className="w-6 h-6" />
-                  </button>
+                  {isDesktop ? (
+                    <Dialog
+                      open={openItemId === item.id}
+                      onOpenChange={(isOpen) =>
+                        setOpenItemId(isOpen ? item.id : null)
+                      }
+                    >
+                      <DialogTrigger asChild>
+                        <button
+                          className="px-2 py-1 paragraph inline-flex w-fit items-center justify-center gap-2 text-sm sm:text-base uppercase transition-all duration-300 whitespace-nowrap hover:bg-black hover:text-white"
+                          aria-label="View Detail"
+                        >
+                          View Detail
+                          <ArrowUpRight strokeWidth={1} className="w-6 h-6" />
+                        </button>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto">
+                        <div className="px-4 py-2">
+                          <img
+                            src={item.images[0]}
+                            alt={item.title}
+                            className="w-full h-auto object-cover rounded-lg mb-4"
+                          />
+                        </div>
+                        <DialogHeader>
+                          <DialogTitle>{item.title}</DialogTitle>
+                          <DialogDescription className="text-sm text-gray-500 mt-1">
+                            {item.category}
+                          </DialogDescription>
+                        </DialogHeader>
+                        <div className="space-y-4">
+                          <p className="text-base text-gray-700">
+                            {item.description}
+                          </p>
+                          <hr />
+                          <p className="text-sm text-gray-600 leading-relaxed">
+                            {item.detailedDescription}
+                          </p>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
+                  ) : (
+                    <Drawer
+                      open={openItemId === item.id}
+                      onOpenChange={(isOpen) =>
+                        setOpenItemId(isOpen ? item.id : null)
+                      }
+                    >
+                      <DrawerTrigger asChild>
+                        <button
+                          className="px-2 py-1 paragraph inline-flex w-fit items-center justify-center gap-2 text-sm sm:text-base uppercase transition-all duration-300 whitespace-nowrap hover:bg-black hover:text-white"
+                          aria-label="View Detail"
+                        >
+                          View Detail
+                          <ArrowUpRight strokeWidth={1} className="w-6 h-6" />
+                        </button>
+                      </DrawerTrigger>
+                      <DrawerContent>
+                        <div className="px-4 py-2">
+                          <img
+                            src={item.images[0]}
+                            alt={item.title}
+                            className="w-full h-auto object-cover rounded-t-lg"
+                          />
+                        </div>
+                        <DrawerHeader className="text-left">
+                          <DrawerTitle>{item.title}</DrawerTitle>
+                          <DrawerDescription className="text-sm text-gray-500 mt-1">
+                            {item.category}
+                          </DrawerDescription>
+                        </DrawerHeader>
+                        <div className="space-y-4 px-4 pb-4">
+                          <p className="text-base text-gray-700">
+                            {item.description}
+                          </p>
+                          <hr />
+                          <p className="text-sm text-gray-600 leading-relaxed">
+                            {item.detailedDescription}
+                          </p>
+                        </div>
+                        <DrawerFooter className="pt-2"></DrawerFooter>
+                      </DrawerContent>
+                    </Drawer>
+                  )}
                 </div>
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 items-start md:items-center justify-between gap-4">
                   <div className="flex flex-col space-y-0.5">
@@ -102,14 +241,12 @@ export function PortofolioGridSection() {
                       Category
                     </p>
                     <p className="paragraph text-base sm:text-lg">
-                      Interior Design
+                      {item.category}
                     </p>
                   </div>
 
                   <p className="max-w-xl paragraph text-sm sm:text-base lg:text-lg">
-                    More than buildings, we design human experiences. Our studio
-                    crafts thoughtful environments that connect, inspire, and
-                    resonate for a lifetime.
+                    {item.description}
                   </p>
                 </div>
               </div>

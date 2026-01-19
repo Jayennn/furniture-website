@@ -26,7 +26,7 @@ export function Navbar() {
                 href="/project"
                 className="paragraph text-sm transition-colors md:text-lg lg:text-xl"
               >
-                Portfolio
+                Project
               </a>
             </li>
           </ul>

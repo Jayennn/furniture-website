@@ -18,12 +18,13 @@ export function CtaSection() {
                 material, and light come together to create a calm and balanced
                 living environment.
               </p>
-              <button
+              <a
+                href="/project"
                 className="paragraph flex w-fit items-center gap-2 text-sm uppercase transition-opacity sm:text-base underline underline-offset-8 decoration-[#3D3029]/50 hover:opacity-70"
-                aria-label="View more projects"
+                aria-label="View all projects"
               >
                 View Project
-              </button>
+              </a>
             </div>
           </div>
           <div className="w-full h-full lg:w-2/4">

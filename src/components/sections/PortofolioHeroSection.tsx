@@ -13,11 +13,14 @@ export function PortofolioHeroSection() {
         </div>
         {/* Box */}
         <div className="w-full flex flex-col justify-center space-y-3 px-4 py-6 bg-white sm:px-6 sm:py-8 lg:max-w-lg lg:mt-auto">
-          <h2 className="heading text-xl sm:text-2xl">Lorem Ipsum Dolor.</h2>
+          <h2 className="heading text-xl sm:text-2xl">Elevating Spaces.</h2>
           <div className="space-y-6">
             <p className="paragraph text-sm sm:text-base">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-              quia quidem sunt quod praesentium quibusdam quaerat esse.
+              From conceptual design to final installation, we deliver
+              comprehensive solutions that merge aesthetic excellence with
+              functional innovation. Our integrated approach ensures seamless
+              coordination across furniture curation, interior styling, and
+              property development.
             </p>
             <button
               className="paragraph flex w-fit items-center gap-2 text-sm transition-opacity underline underline-offset-4 hover:opacity-70 sm:text-base sm:underline-offset-8"

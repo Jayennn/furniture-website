@@ -9,11 +9,11 @@ export function HeroSection() {
       <div className="container px-4 sm:px-6">
         <div className="flex flex-col gap-6 mb-16 sm:gap-8 sm:items-start sm:justify-between lg:flex-row lg:items-center lg:gap-12">
           <h1 className="heading w-full text-4xl text-white shrink-0 sm:text-5xl md:text-[#1A1A1A] lg:max-w-2xl lg:text-6xl">
-            Beautiful Furniture for Your Home
+            Furniture & Interiors
           </h1>
           <p className="paragraph max-w-md text-sm text-white sm:text-base md:text-[#1A1A1A] md:text-lg lg:text-xl">
-            Discover our exquisite collection of handcrafted furniture designed
-            to bring elegance and comfort to your living space.
+            Crafting timeless furniture collections and interior environments
+            that blend artistic vision with sustainable craftsmanship.
           </p>
         </div>
         <img

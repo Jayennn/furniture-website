@@ -8,20 +8,21 @@ const portofolioItems = [
     title: "Modern Living Room",
     image: portofolioImage1,
     description:
-      "Contemporary furniture design for sophisticated living spaces",
+      "Sophisticated furniture design creating cohesive, functional living environments with contemporary aesthetic appeal",
   },
   {
     id: 2,
     title: "Minimalist Workspace",
     image: portofolioImage2,
     description:
-      "Functional and elegant design for productive work environments",
+      "Strategic commercial design maximizing productivity and employee wellness through thoughtful spatial planning",
   },
   {
     id: 3,
     title: "Luxury Bedroom",
     image: portofolioImage3,
-    description: "Comfortable and stylish furniture for restful bedrooms",
+    description:
+      "Premium residential furnishings delivering comfort, elegance, and personalized sanctuary spaces for restful living",
   },
 ];
 
@@ -64,12 +65,13 @@ export function PortofolioSection() {
                 <p className="paragraph text-base uppercase tracking-wide">
                   {item.title}
                 </p>
-                <button
+                <a
+                  href="/project"
                   className="paragraph flex w-fit items-center gap-2 text-base uppercase transition-opacity underline underline-offset-4 hover:opacity-70 sm:underline-offset-8"
                   aria-label={`View ${item.title} project`}
                 >
                   View Project
-                </button>
+                </a>
               </div>
             </article>
           ))}
