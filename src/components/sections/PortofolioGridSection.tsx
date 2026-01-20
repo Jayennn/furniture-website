@@ -23,7 +23,6 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import { TextReveal } from "../common";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 interface Portfolio {
