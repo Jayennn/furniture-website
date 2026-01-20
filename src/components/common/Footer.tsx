@@ -1,32 +1,46 @@
 import image from "@/assets/assets.webp";
 import { Instagram } from "lucide-react";
-
+import {
+  // COMPANY_EMAIL,
+  // COMPANY_NAME,
+  INSTAGRAM_HANDLE,
+  INSTAGRAM_URL,
+} from "@/constants";
+import { TextReveal } from "./TextReveal";
 export function Footer() {
   return (
-    <footer className="py-12 lg:py-32" role="contentinfo" aria-label="Footer">
+    <footer
+      className="pt-0 pb-12 lg:py-32"
+      role="contentinfo"
+      aria-label="Footer"
+    >
       <div className="container px-4 sm:px-6">
         <hr className="border-gray-200 my-12 lg:my-32" />
         <div className="flex flex-col gap-12 lg:flex-row lg:gap-0">
           {/* left */}
           <div className="flex w-full flex-col justify-between lg:max-w-2xl">
             <div className="space-y-4">
-              <h3 className="heading text-4xl sm:text-5xl lg:text-6xl">
-                Contact Us
-              </h3>
-              <p className="paragraph max-w-xs text-sm md:max-w-sm md:text-lg lg:text-xl">
-                Get in touch with us for any enquiries and questions
-              </p>
+              <TextReveal asChild>
+                <h3 className="heading text-4xl sm:text-5xl lg:text-6xl">
+                  Contact Us
+                </h3>
+              </TextReveal>
+              <TextReveal asChild>
+                <p className="paragraph max-w-xs text-sm md:max-w-sm md:text-lg lg:text-xl">
+                  Get in touch with us for any enquiries and questions
+                </p>
+              </TextReveal>
             </div>
 
             <a
               className="paragraph flex items-center gap-2 text-base mt-6 transition-opacity sm:text-lg lg:mt-0 lg:text-xl hover:opacity-70"
-              href="https://instagram.com/carpentiere.id"
+              href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit Carpentiére Instagram profile"
             >
               <Instagram strokeWidth={2} size={20} aria-hidden="true" />
-              carpentiere.id
+              {INSTAGRAM_HANDLE}
             </a>
           </div>
 

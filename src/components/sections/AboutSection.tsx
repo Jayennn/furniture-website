@@ -3,6 +3,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
+import { TextReveal } from "../common";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -40,13 +41,17 @@ export function AboutSection() {
           {/* Brand Info */}
           <div className="flex w-full flex-col xl:w-1/2">
             <div className="flex h-auto flex-col justify-center mb-6 space-y-4 lg:mb-0 lg:h-96">
-              <h2 className="heading text-4xl tracking-[4%] sm:text-5xl lg:text-6xl">
-                Carpentiére
-              </h2>
-              <p className="paragraph text-sm mb-8 md:text-lg lg:mb-12 lg:text-xl">
-                We are a design studio focused on creating furniture and
-                interior spaces that feel calm, balanced, and timeless.
-              </p>
+              <TextReveal asChild>
+                <h2 className="heading text-4xl tracking-[4%] sm:text-5xl lg:text-6xl">
+                  Bethany Furniture
+                </h2>
+              </TextReveal>
+              <TextReveal asChild>
+                <p className="paragraph text-sm mb-8 md:text-lg lg:mb-12 lg:text-xl">
+                  We are a design studio focused on creating furniture and
+                  interior spaces that feel calm, balanced, and timeless.
+                </p>
+              </TextReveal>
             </div>
             <img
               className="w-full rounded-lg object-cover"

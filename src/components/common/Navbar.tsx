@@ -1,5 +1,5 @@
 // import { Menu } from "lucide-react";
-
+import { COMPANY_NAME } from "@/constants";
 export function Navbar() {
   return (
     <nav
@@ -10,7 +10,7 @@ export function Navbar() {
       <div className="container px-4 py-4 sm:px-6 sm:py-6">
         <div className="flex items-center justify-between">
           <h1 className="heading text-xl font-light uppercase tracking-wide">
-            Bethany Furniture
+            {COMPANY_NAME}
           </h1>
           <ul className="flex items-center space-x-6 md:space-x-10">
             <li className="inline-block">
@@ -30,14 +30,6 @@ export function Navbar() {
               </a>
             </li>
           </ul>
-          {/* <button
-            className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-            aria-label="Menu"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-          >
-            <Menu size={24} strokeWidth={2} />
-          </button> */}
         </div>
       </div>
     </nav>
