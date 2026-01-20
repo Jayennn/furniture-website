@@ -94,7 +94,6 @@ export function PortofolioGridSection() {
             trigger: container,
             start: "top 60%",
             end: "top 30%",
-            // markers: true,
             once: true,
           },
         });
@@ -108,11 +107,9 @@ export function PortofolioGridSection() {
       <div className="container px-4 sm:px-6">
         <div className="mb-12 flex flex-col gap-8 sm:gap-12 lg:mb-20 lg:gap-16">
           <div className="flex flex-col space-y-4 lg:flex-row lg:items-center lg:justify-between lg:space-y-0">
-            <TextReveal asChild>
-              <h2 className="heading shrink-0 text-3xl sm:text-4xl lg:text-6xl">
-                Portofolio
-              </h2>
-            </TextReveal>
+            <h2 className="heading shrink-0 text-3xl sm:text-4xl lg:text-6xl">
+              Portofolio
+            </h2>
             <p className="paragraph text-sm sm:text-base md:max-w-lg md:text-lg lg:text-xl">
               More than buildings, we design human experiences. Our studio
               crafts thoughtful environments that connect, inspire, and resonate
