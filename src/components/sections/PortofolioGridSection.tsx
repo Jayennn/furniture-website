@@ -94,7 +94,7 @@ export function PortofolioGridSection() {
             trigger: container,
             start: "top 60%",
             end: "top 30%",
-            markers: true,
+            // markers: true,
             once: true,
           },
         });
