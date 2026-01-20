@@ -1,6 +1,7 @@
 import portofolioImage1 from "@/assets/portofolio-image-1.webp";
 import portofolioImage2 from "@/assets/portofolio-image-2.webp";
 import portofolioImage3 from "@/assets/portofolio-image-3.webp";
+import { TextReveal } from "../common";
 
 const portofolioItems = [
   {
@@ -35,14 +36,18 @@ export function PortofolioSection() {
       <div className="container px-4 sm:px-6">
         <div className="flex flex-col gap-8 mb-12 sm:gap-12 lg:mb-20 lg:gap-16">
           <div className="flex flex-col space-y-4 lg:flex-row lg:items-center lg:justify-between lg:space-y-0">
-            <h2 className="heading shrink-0 text-4xl sm:text-5xl lg:text-6xl">
-              Portofolio
-            </h2>
-            <p className="paragraph text-sm md:max-w-lg md:text-lg lg:text-xl">
-              More than buildings, we design human experiences. Our studio
-              crafts thoughtful environments that connect, inspire, and resonate
-              for a lifetime.
-            </p>
+            <TextReveal asChild>
+              <h2 className="heading shrink-0 text-4xl sm:text-5xl lg:text-6xl">
+                Portofolio
+              </h2>
+            </TextReveal>
+            <TextReveal asChild>
+              <p className="paragraph text-sm md:max-w-lg md:text-lg lg:text-xl">
+                More than buildings, we design human experiences. Our studio
+                crafts thoughtful environments that connect, inspire, and
+                resonate for a lifetime.
+              </p>
+            </TextReveal>
           </div>
           <hr className="border-gray-200" />
         </div>
