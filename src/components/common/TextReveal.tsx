@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
-interface TextRevealProps extends React.HTMLAttributes<HTMLElement> {
+interface TextRevealProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
   delay?: number;
   duration?: number;
@@ -19,7 +19,7 @@ interface TextRevealProps extends React.HTMLAttributes<HTMLElement> {
   triggerEnd?: string;
 }
 
-export const TextReveal = React.forwardRef<HTMLElement, TextRevealProps>(
+export const TextReveal = React.forwardRef<HTMLDivElement, TextRevealProps>(
   (
     {
       children,
@@ -29,20 +29,18 @@ export const TextReveal = React.forwardRef<HTMLElement, TextRevealProps>(
       stagger = 0.2,
       splitType = "lines",
       asChild = false,
-      triggerStart = "top 75%",
+      triggerStart = "top 65%",
       triggerEnd = "top 50%",
       ...props
     },
     ref,
   ) => {
-    const textRef = useRef<HTMLElement>(null);
+    const textRef = useRef<HTMLDivElement>(null);
     const Comp = asChild ? Slot : "div";
 
     useEffect(() => {
-      // Refresh ScrollTrigger saat component mount
       ScrollTrigger.refresh();
 
-      // Handle window resize
       const handleResize = () => {
         ScrollTrigger.refresh();
       };
@@ -71,7 +69,6 @@ export const TextReveal = React.forwardRef<HTMLElement, TextRevealProps>(
           start: triggerStart,
           end: triggerEnd,
           once: true,
-          // debug: true, // uncomment untuk debug
         },
       });
 
