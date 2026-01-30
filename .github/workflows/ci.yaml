@@ -14,16 +14,16 @@ jobs:
       - name: Get Latest Code
         uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version-file: ".node-version"
           cache: "pnpm"
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: latest
 
       - name: Install Dependencies
         run: pnpm install
